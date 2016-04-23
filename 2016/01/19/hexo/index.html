@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>hexo | Jc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="linux mint hexo安装部署Hexo系列教程: Hexo介绍
+什么是Hexo?
+hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的@tommy351 引用 @tommy351 一句话:
+快速、简洁且高效的博客框架。
+类似于jekyll、Octopress、WordPress，我们可以用hexo创建自己的博客，托管到G">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo">
+<meta property="og:url" content="http://jackal.space/2016/01/19/hexo/index.html">
+<meta property="og:site_name" content="Jc">
+<meta property="og:description" content="linux mint hexo安装部署Hexo系列教程: Hexo介绍
+什么是Hexo?
+hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的@tommy351 引用 @tommy351 一句话:
+快速、简洁且高效的博客框架。
+类似于jekyll、Octopress、WordPress，我们可以用hexo创建自己的博客，托管到G">
+<meta property="og:image" content="http://jackal.space/img/hexo01.png">
+<meta property="og:image" content="http://jackal.space/img/hexo02.png">
+<meta property="og:image" content="http://jackal.space/img/hexo03.png">
+<meta property="og:image" content="http://jackal.space/img/hexo04.png">
+<meta property="og:image" content="http://jackal.space/img/hexo05.png">
+<meta property="og:updated_time" content="2016-01-29T06:16:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo">
+<meta name="twitter:description" content="linux mint hexo安装部署Hexo系列教程: Hexo介绍
+什么是Hexo?
+hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。作者是来自台湾的@tommy351 引用 @tommy351 一句话:
+快速、简洁且高效的博客框架。
+类似于jekyll、Octopress、WordPress，我们可以用hexo创建自己的博客，托管到G">
+<meta name="twitter:image" content="http://jackal.space/img/hexo01.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Jc" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+
+<script type="text/javascript">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b706b57144bfc48e169a74c8841a644d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="img/缘之空.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">JackalCloud</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">Remember that she was the best gift I could give to each other.</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>这只是一个菜单</li>
+						<li>标签不代表什么</li>
+						
+						<li>就决定是你啦～皮卡丘</li>
+						
+						
+						<li>关于我的那些事</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/jackalcloud" title="github">github</a>
+					        
+								<a class="facebook" target="_blank" href="https://www.facebook.com/jackal94120" title="facebook">facebook</a>
+					        
+								<a class="google" target="_blank" href="https://plus.google.com/118157507853077526729/posts" title="google">google</a>
+					        
+								<a class="twitter" target="_blank" href="https://twitter.com/DairJackal" title="twitter">twitter</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Blog/" style="font-size: 16.67px;">Blog</a> <a href="/tags/eva/" style="font-size: 20px;">eva</a> <a href="/tags/侠客风云传/" style="font-size: 10px;">侠客风云传</a> <a href="/tags/动漫作品/" style="font-size: 13.33px;">动漫作品</a> <a href="/tags/心情/" style="font-size: 16.67px;">心情</a> <a href="/tags/推荐应用/" style="font-size: 10px;">推荐应用</a> <a href="/tags/文学作品/" style="font-size: 16.67px;">文学作品</a> <a href="/tags/歌曲/" style="font-size: 10px;">歌曲</a> <a href="/tags/游戏/" style="font-size: 16.67px;">游戏</a> <a href="/tags/电影/" style="font-size: 10px;">电影</a> <a href="/tags/系统/" style="font-size: 10px;">系统</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://iread.io/">叶阳栩宁的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货… Email：jackal94120@gmail.com</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">JackalCloud</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="img/缘之空.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">JackalCloud</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">Remember that she was the best gift I could give to each other.</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/jackalcloud" title="github">github</a>
+			        
+						<a class="facebook" target="_blank" href="https://www.facebook.com/jackal94120" title="facebook">facebook</a>
+			        
+						<a class="google" target="_blank" href="https://plus.google.com/118157507853077526729/posts" title="google">google</a>
+			        
+						<a class="twitter" target="_blank" href="https://twitter.com/DairJackal" title="twitter">twitter</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/19/hexo/" class="article-date">
+  	<time datetime="2016-01-19T14:55:50.000Z" itemprop="datePublished">2016-01-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hexo
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Blog/">Blog</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="linux-mint-hexo安装部署"><a href="#linux-mint-hexo安装部署" class="headerlink" title="linux mint hexo安装部署"></a>linux mint hexo安装部署</h1><h2 id="Hexo系列教程-Hexo介绍"><a href="#Hexo系列教程-Hexo介绍" class="headerlink" title="Hexo系列教程: Hexo介绍"></a>Hexo系列教程: Hexo介绍</h2><p><img src="/img/hexo01.png" alt="hexo1"></p>
+<p>什么是Hexo?</p>
+<p>hexo是一个基于Node.js的静态博客程序，可以方便的生成静态网页托管在github和Heroku上。<br>作者是来自台湾的@tommy351 引用 @tommy351 一句话:</p>
+<pre><code>快速、简洁且高效的博客框架。
+</code></pre><p>类似于jekyll、Octopress、WordPress，我们可以用hexo创建自己的博客，托管到GitHub上，绑定自己的域名，用MarkDown写文章。本博客即使用hexo创建并托管在github上。</p>
+<p>为什么要使用Hexo?</p>
+<pre><code>超快的速度
+</code></pre><p>Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。</p>
+<p>支持 Markdown</p>
+<pre><code>Hexo 支持 GitHub Flavored Markdown 的所有功能，甚至可以整合 Octopress 的大多数插件。
+</code></pre><p>一键部署</p>
+<pre><code>只需一条指令即可部署到 GitHub Pages, Heroku 或其他网站。
+</code></pre><p>丰富的插件</p>
+<pre><code>Hexo 拥有强大的插件系统，安装插件可以让 Hexo 支持 Jade, CoffeeScript。
+</code></pre><p>笔者使用后的感觉:</p>
+<p>在Windows下 部署简单, 需要记得命令较少 只需要熟悉简单的 hexo new hexo generate hexo server hexo clean hexo deploy五个命令就可以轻松加愉快的完成所有流程<br>部署到GitHub上十分方便 只需要简单的配置和一行命令就可以完成</p>
+<p>哪些人可以使用Hexo?</p>
+<p>这是一个免费开源的博客程序，任何人都可以使用和修改。但是不同于WorldPress，Hexo由于需要使用GitHub, Git,Markdown, Node.js这样的工具，好多插件，都需要自己安装、设置。所以适合那些有一定计算机基础，喜欢折腾的人。但是，不要恐惧，只要跟着本教程走，就能很方便地让自己的博客如同您看到的一样，完美的运行起来。</p>
+<p>上面讲了对Hexo进行了简单的介绍, 那就来说说Hexo在linux环境下的搭建.关于在WINDOWS下的搭建可以参考一下我的朋友的BLOG，里面有很棒很详细的解释，本文很多都是参照那里面来的 <a href="http://iread.io/" target="_blank" rel="external">http://iread.io/</a> <a id="more"></a></p>
+<h2 id="hexo的安装步骤"><a href="#hexo的安装步骤" class="headerlink" title="hexo的安装步骤"></a>hexo的安装步骤</h2><p><strong>Nodejs安装</strong></p>
+<p>因为hexo是基于nodejs的应用，所以要先安装nodejs才可以。使用如下命令即可：</p>
+<pre><code>sudo apt-get install nodejs-legacy（这个是安装Nodejs）
+（sudo apt-get install nodejs这个目前有问题如果使用了推荐用下面这个卸载了sudo apt-get remove --purge nodejs再进行安装 ）
+</code></pre><p><strong>安装npm</strong></p>
+<pre><code>sudo apt-get install npm
+</code></pre><p><strong>安装git</strong></p>
+<pre><code>sudo apt-get install git
+</code></pre><p><strong>安装Hexo</strong></p>
+<pre><code>sudo npm install hexo-cli -g
+</code></pre><p>静静等待安装完毕即可.</p>
+<p><strong>创建Hexo目录</strong></p>
+<p>目录可以再随意地方创建，推荐在主目录下创建文件夹，方便使用</p>
+<pre><code>mkdir hexo  #主目录下创建一个文件夹
+</code></pre><p>安装Hexo安成后，使用如下命令快速新建一个博客系统，然后运行它：</p>
+<pre><code>hexo init hexo   会自动安装依赖环境
+cd hexo
+sudo npm install
+npm install hexo-deployer-git --save
+</code></pre><p>运行<br>Hexo 运行方法很简单只需要一条命令</p>
+<pre><code>hexo server
+</code></pre><p>当出现以下样子就代表运行成功了 注:hexo s 是 hexo server 的简写</p>
+<p><img src="/img/hexo02.png" alt="hexo2"></p>
+<p>运行成功后，访问 <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a> 就可以看到博客的样子的。</p>
+<p><img src="/img/hexo03.png" alt="hexo3"></p>
+<h2 id="Hexo系列教程-GitHub创建以及SSh-key"><a href="#Hexo系列教程-GitHub创建以及SSh-key" class="headerlink" title="Hexo系列教程:GitHub创建以及SSh key"></a>Hexo系列教程:GitHub创建以及SSh key</h2><p>个人博客是个人持续性的日记或评论, 它是最传统常见的博客, 它们成为了一种反映生活的方法或艺术创作, 编写博客可以抒发感情，也可以帮助他人. 相信很多人都写过Blog, 但我们总是希望有更加简洁，便捷的写作方式。Hexo就是其中之一，使用MarkDown语法，让你更注重文章内容。</p>
+<p>阮一峰 - 喜欢写Blog的人，会经历三个阶段</p>
+<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。<br>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。<br>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
+<p>GitHub Page 是什么？<br>GitHub Pages本用于介绍托管在GitHub的项目， 不过，由于他的空间免费稳定，用来做搭建一个博客再好不过了。</p>
+<p>github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
+<p><img src="/img/hexo04.png" alt="hexo4"></p>
+<p>GitHub 设置<br>GitHub 账号注册</p>
+<p>访问GitHub官网: <a href="http://www.github.com" target="_blank" rel="external">http://www.github.com</a><br>点击 Sign up 进行注册<br>恩… 注意：邮箱最好是@gmail，@163 之类的，别使用@qq。掉档次啊~。<br>配置和使用GitHub</p>
+<p>使用前提：你的计算机里必须安装了Git (详情请看：教程)</p>
+<p>配置SSh key:</p>
+<p>首先我们需要检查你电脑上现有的ssh key：</p>
+<pre><code>$ cd ~/.ssh
+</code></pre><p>第一次使用必然是提示没有SSH KEY</p>
+<p>生成新的SSH Key：</p>
+<pre><code>$ ssh-keygen -t rsa -C &quot;you@youremail.com&quot;
+</code></pre><p>注意：Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):（回车就好），<br>Enter passphrase (empty for no passphrase):（回车，不需要输入密码）<br>Enter same passphrase again:（回车不需要输入密码）<br>因为Hexo的自动部署如果有密码的话会部署失败</p>
+<p>添加SSH Key到GitHub</p>
+<p>在本机设置SSH Key之后，需要添加到GitHub上，以完成SSH链接的设置。</p>
+<pre><code>$ cd ~/.ssh/ &amp;&amp; ls
+</code></pre><p>可以看到此目录下的文件：id_rsa id_rsa.pub</p>
+<pre><code>$ cat id_rsa.pub
+</code></pre><p>将文件内容全部复制下来</p>
+<p>登陆GitHub官网: <a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a> 进行添加 SSH Keys<br>导航: Account Settings —&gt; SSH keys —&gt; Add SSH keys</p>
+<p>测试是否成功</p>
+<pre><code>$ ssh -T git@github.com
+</code></pre><p>如果是以下提示：“Hi jackalcloud! You’ve successfully authenticated, but GitHub does not provide shell access.”<br>证明你配置成功了。</p>
+<p>设置用户信息</p>
+<pre><code>$ git config --global user.name &quot;jackalcloud&quot;   #GitHub用户名
+
+$ git config --global user.email  &quot;jackal94120@gmail.com&quot;   #填写自己的邮箱
+</code></pre><p>至此配置GitHub就已经完成了</p>
+<p>使用GitHub Pages建立博客</p>
+<p>GitHub Pages分两种，一种是你的GitHub用户名建立的username.github.io这样的用户&amp;组织页（站），另一种是依附项目的pages。</p>
+<p>想建立个人博客是用的第一种，形如cnfeat.github.io这样的可访问的站，每个用户名下面只能建立一个。</p>
+<p>GitHub上建立仓库</p>
+<p>点击：New repository</p>
+<p>Repository name 的填写格式：Git用户名.github.io</p>
+<p>EG: jackalcloud.github.io</p>
+<h2 id="Hexo系列教程-解释一下hexo这个文件夹的内容配置"><a href="#Hexo系列教程-解释一下hexo这个文件夹的内容配置" class="headerlink" title="Hexo系列教程:解释一下hexo这个文件夹的内容配置"></a>Hexo系列教程:解释一下hexo这个文件夹的内容配置</h2><p>_config.yml是配置站点的文件，public是hexo生成的静态站点文件夹，scaffolds是模板文件夹，source是存在用户资源的文件夹，themes是主题文件夹。</p>
+<p>站点配置</p>
+<p>_config.yml找到title，subtitle，author参数配置，分别配置站点的标题、副标题和作者,比如我这里是：</p>
+<pre><code>title:Jc    # 网站标题
+subtitle:“Remember that she was the best gift I could give to each other. ”    # 简介
+description: 记住她原本的样子,就是我能送给我们彼此的最佳礼物    # 描述
+author:JackalCloud     # 网站作者
+language: default     # 网站语言
+email:jackal94120@gmail.com
+timezone: Asia/Hong_Kong        #时区
+</code></pre><p>然后配置站点的url和permalink，这两个分别是你的站点的url host地址以及文章的永久连接，我这里是：</p>
+<pre><code>url: http://jackal.space
+root:/
+permalink::year/:month/:day/:title/
+permalink_defaults:
+
+# Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+type: git     # 部署的位置  写git
+repository: git@github.com:jackalcloud/jackalcloud.github.io.git
+# 这里填写项目的地址 git@github.com:Git用户名/Git用户名.github.io.git 参照上面
+branch: master    # 分支选择 master
+</code></pre><p><img src="/img/hexo05.png" alt="hexo5"></p>
+<h2 id="Hexo系列教程-BLOG的使用"><a href="#Hexo系列教程-BLOG的使用" class="headerlink" title="Hexo系列教程:BLOG的使用"></a>Hexo系列教程:BLOG的使用</h2><p>使用如下命令即可新增一篇md格式的文章：</p>
+<pre><code>hexo new “文章题目”
+</code></pre><p>然后就会在sources/_posts生成一篇文件名为文章题目.md的markdown文件。编辑该文件就可以写博客了。这里有一些Front-matter需要介绍，可以配置文章使用的模板、所属的分类和tag等。</p>
+<p>Front-matter 是文件最上方以 —- 分隔的区域，用于指定个别文件的变量，举例来说：</p>
+<pre><code>title:&quot;使用Hexo在Github上搭建自己的博客&quot;
+date:2016-01-10 22:30:04
+tags:
+-Hexo
+-Github
+categories:
+-Hexo
+---
+</code></pre><p>请注意，目前的categories只能有一个一级分类，如果填写多个，第二个会被解析为二级分类，以及类推。tags可以允许有多个。更多关于Front-matter请参考 <a href="http://hexo.io/zh-cn/docs/front-matter.html" target="_blank" rel="external">http://hexo.io/zh-cn/docs/front-matter.html</a> 。</p>
+<p>发布到github page</p>
+<p>首先你已经创建好了你的github page对应的git库，没有创建的可以google相关博客。然后新建一个hexo分支，存放你现在hexo的所有文件。然后执行如下命令清理并生成发布的静态站点文件。</p>
+<pre><code>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo deploy &amp;&amp; hexo clean
+</code></pre><p>讲解一下这串命令含义：</p>
+<p>hexo clean : 清理 database 和 /public目录， /public目录里是生成的静态文件数据。<br>hexo generaet : 简写是 “hexo g” 命令是用来生成静态页面的 会创建 /public目录静态页面数据都在这个文件夹里。<br>hexo deploy ： 一键部署命令上面在 _config.yml文件中配置了部署信息。这个命令会帮助你一键部署。<br>如果显示如下信息， 就代表成功了。<br>访问：<a href="http://你的Git用户名.github.io" target="_blank" rel="external">http://你的Git用户名.github.io</a> 看看能在互联网中访问~</p>
+<p>去看看你的Git仓库中有没有成功的上传了文件。</p>
+<h2 id="Hexo系列教程-将独立域名与GitHub-Pages的空间绑定"><a href="#Hexo系列教程-将独立域名与GitHub-Pages的空间绑定" class="headerlink" title="Hexo系列教程:将独立域名与GitHub Pages的空间绑定"></a>Hexo系列教程:将独立域名与GitHub Pages的空间绑定</h2><p>恩，这里就不在讲述购买域名的方法了。国内购买域名建议去 “万网”，“美橙互联”等域名供应商。国外“GoDaddy”，其他的我也不太清楚了。</p>
+<p>Github Page的设置<br>方法一：在Repository的根目录下面（项目的根目录），新建一个CNAME的文件（注：没有后缀）里面写入你要绑定的域名如：iread.io保存退出即可。</p>
+<p>方法二：在你本地的Hexo项目根目录下找到source目录，在source根目录下创建CNAME文件注：没有后缀）里面写入你要绑定的域名如：iread.io保存退出即可。</p>
+<p>DNS设置</p>
+<p>在写搭建这个Blog的时候我也参考了很多文章，但是不知道为什么每篇文章都推荐DNSPod，这点我还是比较随意的。</p>
+<p>这里使用 GoDaddy进行介绍。登录GoDaddy官网。</p>
+<p>选择你要使用的域名，进行DNS管理</p>
+<p>DNS ZONE FILE添加需要的记录。需要添加两条A记录，一条CNAME记录，如果去使用DNSPod还需要删除原来的NS记录，换上DNSPod提供的NS地址。</p>
+<p>这两个地址是GitHub提供的。如果哪天Blog登陆不了了。可以去GitHub Page查看最新的IP即可。</p>
+<p>HOST填写 www，POINTS TO填写你的 Git用户名.github.io。</p>
+<p>搭建完成<br>至此，独立博客就算搭建完成，如有问题请在下留言。</p>
+<h2 id="Hexo系列教程-部署时保证README-md不被渲染"><a href="#Hexo系列教程-部署时保证README-md不被渲染" class="headerlink" title="Hexo系列教程:部署时保证README.md不被渲染"></a>Hexo系列教程:部署时保证README.md不被渲染</h2><p>最近看到有很多人问如何在Hexo部署的时候放置README.md文件，且不被渲染，我之前也在这个问题上纠结了好久。之后看到一篇文章才搞明白。但是那篇文章的地址没有记住。实在对不起作者啊。。</p>
+<p>添加README.md文件<br>文件添加在 Hexo目录下的source根目录下创建README.md文件。并编辑保存。</p>
+<p>防止README.md被渲染<br>编辑Hexo目录的_config.yml文件中的“skip_render”参数。<br>eg：</p>
+<p>skip_render: README.md<br>保存并退出。</p>
+<p>完成<br>试着命令部署，再去你的 Git仓库看看是否存在README.md文件。</p>
+<pre><code>$ hexo cl &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; hexo cl
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/01/20/linux-mint/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          linux mint 安装
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/12/14/吃喜欢的东西，过短命的人生？/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">吃喜欢的东西，过短命的人生？</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="hexo" data-title="hexo" data-url="http://jackal.space/2016/01/19/hexo/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jackalcloud"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 JackalCloud
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
